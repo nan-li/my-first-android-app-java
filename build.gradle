@@ -24,6 +24,8 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        jcenter() // manually added by me after running CLI
+        gradlePluginPortal() // manually added by me after running CLI
     }
 
     /**
@@ -34,6 +36,7 @@ buildscript {
 
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.1"
+        classpath "gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.9, 0.99.99]"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -53,7 +56,8 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        jcenter()
+        gradlePluginPortal() // Warning: this repository is going to shut down soon
     }
 }
 
